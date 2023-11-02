@@ -6,6 +6,15 @@ import { faDribbble } from "@fortawesome/free-brands-svg-icons";
 import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 
+function FooterBlock({ title, Comp: component }) {
+    return (
+        <div className="footer_block flex column">
+            <h2>{title}</h2>
+            {component}
+        </div>
+    );
+}
+
 function FooterNav({ items }) {
     let itemsList = items.map((item, i) => {
         return (
@@ -17,10 +26,23 @@ function FooterNav({ items }) {
 
     return (
         <div className="footer_nav_container flex column">
-            <h2>Navigation</h2>
             <nav className="footer_nav">
                 <ul className="flex column">{itemsList}</ul>
             </nav>
+        </div>
+    );
+}
+function InstaGrid() {
+    return (
+        <div className="insta">
+            <div className="feed">
+                <div className="feed_post"></div>
+                <div className="feed_post"></div>
+                <div className="feed_post"></div>
+                <div className="feed_post"></div>
+                <div className="feed_post"></div>
+                <div className="feed_post"></div>
+            </div>
         </div>
     );
 }
@@ -44,20 +66,26 @@ function Socials() {
 }
 
 function Footer() {
+    let Nav = (
+        <FooterNav
+            items={[
+                "About",
+                "Features",
+                "Pricing",
+                "Careers",
+                "Help",
+                "Privacy Policy",
+            ]}
+        />
+    );
+    let Insta = <InstaGrid />;
     return (
         <footer className="footer grid justify_center">
             <Logo />
-            <FooterNav
-                items={[
-                    "About",
-                    "Features",
-                    "Pricing",
-                    "Careers",
-                    "Help",
-                    "Privacy Policy",
-                ]}
-            />
-            <div className="insta"></div>
+
+            <FooterBlock title="Navigation" Comp={Nav} />
+            <FooterBlock title="Instagram Follow" Comp={Insta} />
+
             <div className="copyright flex column">
                 © 2023 Blue Guide. All rights reserved
                 <Socials />

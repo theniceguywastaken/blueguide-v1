@@ -2,6 +2,12 @@
     gap: 1.5rem;
     padding: 40px 0;
 }
+.footer_block {
+    text-align: center;
+}
+.footer_block h2 {
+    display: none;
+}
 .footer_nav_container h2 {
     display: none;
 }
@@ -26,11 +32,14 @@
         padding: 5.313rem 7.375rem;
         grid-template-columns: repeat(3, 1fr);
     }
-    .footer_nav_container h2 {
+    .footer_block {
+        gap: 1.375rem;
+    }
+    .footer_block h2 {
         display: block;
     }
-    .footer_nav_container {
-        gap: 1.375rem;
+    .footer_nav_container h2 {
+        display: block;
     }
     .footer_nav ul {
         align-items: start;
