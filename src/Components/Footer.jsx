@@ -81,7 +81,7 @@ function Footer() {
     let Insta = <InstaGrid />;
     return (
         <footer className="footer grid justify_center">
-            <Logo />
+            <Logo color={"white"} />
 
             <FooterBlock title="Navigation" Comp={Nav} />
             <FooterBlock title="Instagram Follow" Comp={Insta} />

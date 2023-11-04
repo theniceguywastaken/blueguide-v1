@@ -33,6 +33,7 @@
         grid-template-columns: repeat(3, 1fr);
     }
     .footer_block {
+        text-align: start;
         gap: 1.375rem;
     }
     .footer_block h2 {

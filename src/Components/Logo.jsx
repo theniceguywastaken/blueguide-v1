@@ -1,9 +1,11 @@
-import blueGuide from "../assets/blueguide.svg";
+import blueGuideW from "../assets/blueguidewhite.svg";
+import blueGuideB from "../assets/blueguideblack.svg";
 
-function Logo() {
+function Logo({ color }) {
+    const logo = color === "white" ? blueGuideW : blueGuideB;
     return (
         <div className="logo">
-            <img src={blueGuide} alt="Blue Guide" />
+            <img src={logo} alt="Blue Guide" />
         </div>
     );
 }
