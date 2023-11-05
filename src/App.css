@@ -4,7 +4,7 @@
 }
 
 .logo {
-    margin: 0 auto;
+    margin: 0;
     will-change: filter;
     transition: filter 300ms;
 }

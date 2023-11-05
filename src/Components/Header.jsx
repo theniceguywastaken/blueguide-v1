@@ -49,10 +49,10 @@ function Header(props) {
         window !== undefined ? () => window().document.body : undefined;
 
     return (
-        <Box sx={{ display: "flex" }}>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
             <CssBaseline />
-            <AppBar component="nav" sx={{ position: "relative" }}>
-                <Toolbar>
+            <AppBar component="nav" position="relative">
+                <Toolbar disableGutters>
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
