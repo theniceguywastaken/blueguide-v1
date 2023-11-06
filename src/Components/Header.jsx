@@ -52,16 +52,20 @@ function Header(props) {
         <Box sx={{ display: "flex", justifyContent: "center" }}>
             <CssBaseline />
             <AppBar component="nav" position="relative">
-                <Toolbar disableGutters>
+                <Toolbar
+                    disableGutters
+                    sx={{ justifyContent: "space-between" }}
+                >
+                    <Logo color="white" />
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
-                        edge="start"
+                        edge="end"
                         onClick={handleDrawerToggle}
                         sx={{
                             mr: 2,
                             display: { sm: "none" },
-                            position: "relative",
+                            margin: 0,
                         }}
                     >
                         <MenuIcon />

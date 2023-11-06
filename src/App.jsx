@@ -1,5 +1,6 @@
 import "./App.css";
 import Header from "./Components/Header";
+import Hero from "./Components/Hero";
 import Footer from "./Components/Footer";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { lime, purple } from "@mui/material/colors";
@@ -78,6 +79,7 @@ function App() {
     return (
         <ThemeProvider theme={theme}>
             <Header />
+            <Hero />
             <Footer />
         </ThemeProvider>
     );
