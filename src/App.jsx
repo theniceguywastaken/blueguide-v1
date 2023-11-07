@@ -3,7 +3,6 @@ import Header from "./Components/Header";
 import Hero from "./Components/Hero";
 import Footer from "./Components/Footer";
 import { createTheme, ThemeProvider } from "@mui/material";
-import { lime, purple } from "@mui/material/colors";
 
 const theme = createTheme({
     palette: {
@@ -23,6 +22,9 @@ const theme = createTheme({
             fontFamily: '"Poppins", "sans-serif"',
         },
         h1: {
+            "@media (max-width:600px)": {
+                fontSize: "2.5rem",
+            },
             fontSize: "3.5rem",
             fontFamily: "'Poppins', sans-serif",
             fontWeight: 600,
@@ -30,6 +32,9 @@ const theme = createTheme({
         fontWeightLight: 300,
         fontSize: 14,
         h2: {
+            "@media (max-width:600px)": {
+                fontSize: "1.3rem",
+            },
             fontFamily: "'Poppins', sans-serif",
             fontSize: "2.3rem",
             fontWeight: 700,
@@ -58,11 +63,21 @@ const theme = createTheme({
             },
         },
         MuiAppBar: {
+            defaultProps: {
+                color: "secondary",
+            },
             styleOverrides: {
                 root: {
                     width: "90%",
                     borderRadius: 50,
                     padding: "0.1rem 2.2rem",
+                },
+            },
+        },
+        MuiButton: {
+            styleOverrides: {
+                root: {
+                    borderRadius: 50,
                 },
             },
         },

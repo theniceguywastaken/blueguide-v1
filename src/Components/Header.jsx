@@ -28,7 +28,10 @@ function Header(props) {
     };
 
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+        <Box
+            onClick={handleDrawerToggle}
+            sx={{ textAlign: "center", padding: "1rem" }}
+        >
             <Typography variant="h6" sx={{ my: 2 }}>
                 <Logo />
             </Typography>
@@ -47,26 +50,38 @@ function Header(props) {
 
     const container =
         window !== undefined ? () => window().document.body : undefined;
-
+    const IconButtonStyling = {
+        mr: 2,
+        display: { sm: "none" },
+        margin: 0,
+        padding: 0,
+    };
     return (
-        <Box sx={{ display: "flex", justifyContent: "center" }}>
+        <Box
+            sx={{
+                display: "flex",
+                justifyContent: "center",
+                margin: "3.813rem 0 -8rem",
+                "@media (max-width:600px)": {
+                    margin: " 1.5rem 0 -6.5rem ",
+                },
+            }}
+        >
             <CssBaseline />
             <AppBar component="nav" position="relative">
                 <Toolbar
                     disableGutters
                     sx={{ justifyContent: "space-between" }}
                 >
-                    <Logo color="white" />
+                    <IconButton sx={IconButtonStyling}>
+                        <Logo />
+                    </IconButton>
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
                         edge="end"
                         onClick={handleDrawerToggle}
-                        sx={{
-                            mr: 2,
-                            display: { sm: "none" },
-                            margin: 0,
-                        }}
+                        sx={IconButtonStyling}
                     >
                         <MenuIcon />
                     </IconButton>
@@ -78,15 +93,20 @@ function Header(props) {
                             display: { xs: "none", sm: "block" },
                         }}
                     >
-                        <Logo color={"white"} />
+                        <Logo />
                     </Typography>
                     <Box sx={{ display: { xs: "none", sm: "block" } }}>
                         {navItems.map((item) => (
-                            <Button key={item} sx={{ color: "#fff" }}>
-                                {item}
-                            </Button>
+                            <Button key={item}>{item}</Button>
                         ))}
                     </Box>
+                    <Button
+                        variant="contained"
+                        disableElevation
+                        sx={{ display: { xs: "none", sm: "block" } }}
+                    >
+                        Download Now!
+                    </Button>
                 </Toolbar>
             </AppBar>
             <nav>
