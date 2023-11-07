@@ -17,7 +17,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
 const drawerWidth = 100;
-const navItems = ["Home", "About", "Contact"];
+const navItems = ["Home", "About Us", "Contact Us"];
 
 function Header(props) {
     const { window } = props;
@@ -89,7 +89,6 @@ function Header(props) {
                         variant="h6"
                         component="div"
                         sx={{
-                            flexGrow: 1,
                             display: { xs: "none", sm: "block" },
                         }}
                     >
@@ -97,7 +96,9 @@ function Header(props) {
                     </Typography>
                     <Box sx={{ display: { xs: "none", sm: "block" } }}>
                         {navItems.map((item) => (
-                            <Button key={item}>{item}</Button>
+                            <Button sx={{ color: "#000" }} key={item}>
+                                {item}
+                            </Button>
                         ))}
                     </Box>
                     <Button

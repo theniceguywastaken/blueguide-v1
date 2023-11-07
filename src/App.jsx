@@ -65,6 +65,7 @@ const theme = createTheme({
         MuiAppBar: {
             defaultProps: {
                 color: "secondary",
+                elevation: 0,
             },
             styleOverrides: {
                 root: {
