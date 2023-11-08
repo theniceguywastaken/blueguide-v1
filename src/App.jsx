@@ -23,7 +23,7 @@ const theme = createTheme({
         },
         h1: {
             "@media (max-width:600px)": {
-                fontSize: "2.5rem",
+                fontSize: "2.3rem",
             },
             fontSize: "3.5rem",
             fontFamily: "'Poppins', sans-serif",

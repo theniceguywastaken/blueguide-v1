@@ -1,5 +1,6 @@
 import * as React from "react";
 import Logo from "./Logo";
+import ButtonBG from "./ButtonBG";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -63,7 +64,7 @@ function Header(props) {
                 justifyContent: "center",
                 margin: "3.813rem 0 -8rem",
                 "@media (max-width:600px)": {
-                    margin: " 1.5rem 0 -6.5rem ",
+                    margin: " 1.5rem 0 -14rem ",
                 },
             }}
         >
@@ -101,13 +102,7 @@ function Header(props) {
                             </Button>
                         ))}
                     </Box>
-                    <Button
-                        variant="contained"
-                        disableElevation
-                        sx={{ display: { xs: "none", sm: "block" } }}
-                    >
-                        Download Now!
-                    </Button>
+                    <ButtonBG content="Download Now" icon hideXs />
                 </Toolbar>
             </AppBar>
             <nav>
