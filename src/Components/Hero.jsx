@@ -1,5 +1,5 @@
 import { Box, Grid, Typography, Container } from "@mui/material";
-import bookCover from "../assets/bookcover.svg";
+import bookCover from "../assets/eguidecover.png";
 import bgShape from "../assets/bgshape.svg";
 import bgShapeMobile from "../assets/bgshapemobile.svg";
 import ButtonBG from "./ButtonBG";

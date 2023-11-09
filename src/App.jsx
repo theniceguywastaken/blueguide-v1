@@ -1,8 +1,10 @@
 import "./App.css";
 import Header from "./Components/Header";
 import Hero from "./Components/Hero";
+import Section from "./Components/Section";
 import Footer from "./Components/Footer";
 import { createTheme, ThemeProvider } from "@mui/material";
+import door from "./assets/door.png";
 
 const theme = createTheme({
     palette: {
@@ -48,6 +50,9 @@ const theme = createTheme({
         },
         h4: {
             fontFamily: "'Poppins', sans-serif",
+        },
+        subtitle2: {
+            fontWeight: 700,
         },
         fontFamily: "'Poppins', sans-serif",
         button: {
@@ -96,6 +101,14 @@ function App() {
         <ThemeProvider theme={theme}>
             <Header />
             <Hero />
+            <Section
+                img={door}
+                title="Founder Story"
+                author
+                heading="The Story Behind Blue Guide"
+                subheading="From a Local's Passion to the Ultimate Guide"
+                text="“As a lifelong resident of Chefchaouen, I have always been passionate about sharing the unique beauty and culture of my hometown with others. After years of exploring every nook and cranny of the blue city, I decided to create Blue Guide an e-guide that captures the true essence of Chefchaouen and all it has to offer. With the help of other local enthusiasts, we have created a comprehensive guide that showcases the best of Chefchaouen, from the hidden gems to the well known landmarks. We hope that our guide will inspire you to discover the magic of Chefchaouen and all it has to offer.”"
+            />
             <Footer />
         </ThemeProvider>
     );
