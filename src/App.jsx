@@ -6,6 +6,8 @@ import Footer from "./Components/Footer";
 import { createTheme, ThemeProvider } from "@mui/material";
 import door from "./assets/door.png";
 
+const width = 90;
+const padding = 2.2;
 const theme = createTheme({
     palette: {
         mode: "light",
@@ -28,7 +30,6 @@ const theme = createTheme({
                 fontSize: "2.3rem",
             },
             fontSize: "3.5rem",
-            fontFamily: "'Poppins', sans-serif",
             fontWeight: 600,
         },
         fontWeightLight: 300,
@@ -37,19 +38,23 @@ const theme = createTheme({
             "@media (max-width:600px)": {
                 fontSize: "1.3rem",
             },
-            fontFamily: "'Poppins', sans-serif",
             fontSize: "2.3rem",
             fontWeight: 700,
             letterSpacing: "0em",
         },
         h3: {
             fontSize: "1.25rem",
-            fontFamily: "'Poppins', sans-serif",
             fontWeight: 600,
             textTransform: "uppercase",
         },
-        h4: {
-            fontFamily: "'Poppins', sans-serif",
+        span: {
+            fontSize: "1.25rem",
+            fontWeight: 600,
+            textTransform: "uppercase",
+            letterSpacing: "2px",
+            "@media (max-width:600px)": {
+                fontSize: "0.9rem",
+            },
         },
         subtitle2: {
             fontWeight: 700,
@@ -74,9 +79,9 @@ const theme = createTheme({
             },
             styleOverrides: {
                 root: {
-                    width: "90%",
+                    width: `${width}%`,
                     borderRadius: 50,
-                    padding: "0.1rem 2.2rem",
+                    padding: `0.1rem ${padding}rem`,
                 },
             },
         },
@@ -87,12 +92,13 @@ const theme = createTheme({
                 },
             },
         },
-        // MuiCard: {
-        //   styleOverrides: {
-        //     root: {
-        //       padding: '1rem',
+        // MuiGrid: {
+        //     styleOverrides: {
+        //         container: {
+        //             width: `${width}%`,
+        //             padding: `0 ${padding}rem`,
+        //         },
         //     },
-        //   },
         // },
     },
 });
