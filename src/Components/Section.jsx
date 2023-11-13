@@ -1,7 +1,15 @@
 import { Box, Grid, Typography } from "@mui/material";
 import avatar from "../assets/bilalharras.png";
 
-const Section = ({ img, title, heading, subheading, text, author }) => {
+const Section = ({
+    img,
+    title,
+    heading,
+    subheading,
+    text,
+    author,
+    imgWidth,
+}) => {
     let authorCard = author ? (
         <Grid container columnSpacing={3}>
             <Grid item>
@@ -15,7 +23,7 @@ const Section = ({ img, title, heading, subheading, text, author }) => {
             </Grid>
         </Grid>
     ) : null;
-    let containerStyles = {
+    const containerStyles = {
         width: "90%",
         padding: "0 2.2rem",
         margin: "5rem 0",
@@ -37,17 +45,17 @@ const Section = ({ img, title, heading, subheading, text, author }) => {
                     xs={12}
                     md={6}
                 >
-                    <img src={img} alt="" style={{ width: "80%" }} />
+                    <img src={img} alt="" style={{ width: `${imgWidth}%` }} />
                 </Grid>
                 <Grid
                     item
                     xs={12}
                     md={6}
                     container
-                    rowSpacing={{ xs: 2, md: 3 }}
+                    rowSpacing={{ xs: 2, md: 0 }}
                 >
-                    <Grid item container alignItems="center">
-                        <Grid item xs={5} md={3}>
+                    <Grid md={12} item container alignItems="center">
+                        <Grid item xs={5} md={5}>
                             <Typography variant="span" color="primary">
                                 {title}
                             </Typography>
@@ -61,18 +69,25 @@ const Section = ({ img, title, heading, subheading, text, author }) => {
                             />
                         </Grid>
                     </Grid>
-                    <Grid item>
+                    <Grid item md={12}>
                         <Typography variant="h2">{heading}</Typography>
                     </Grid>
-                    <Grid item>
-                        <Typography variant="subtitle2">
-                            {subheading}
-                        </Typography>
-                    </Grid>
-                    <Grid item>
+                    {subheading ? (
+                        <Grid item md={12}>
+                            <Typography variant="subtitle2">
+                                {subheading}
+                            </Typography>
+                        </Grid>
+                    ) : null}
+
+                    <Grid item md={12}>
                         <Typography variant="p">{text}</Typography>
                     </Grid>
-                    <Grid item>{authorCard}</Grid>
+                    {authorCard ? (
+                        <Grid item md={12}>
+                            {authorCard}
+                        </Grid>
+                    ) : null}
                 </Grid>
             </Grid>
         </Box>
