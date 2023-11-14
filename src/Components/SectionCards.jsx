@@ -23,9 +23,11 @@ const SectionCards = ({ title, heading }) => {
             <Grid
                 container
                 textAlign={"center"}
-                columnSpacing={6}
+                // columnSpacing={10}
+                columnGap={9}
                 rowGap={3}
                 sx={containerStyles}
+                justifyContent="center"
             >
                 <Grid item md={12}>
                     <Typography variant="span" color="primary">
@@ -35,21 +37,21 @@ const SectionCards = ({ title, heading }) => {
                 <Grid item md={12}>
                     <Typography variant="h2">{heading}</Typography>
                 </Grid>
-                <Grid item md={4}>
+                <Grid item md={3}>
                     <Card
                         icon={houseIcon}
                         title="Local expertise"
                         text="You'll get an authentic experience of Chefchaouen that no other guide can match. Our local expertise allows us to share the hidden gems of the city that you won't find in tourist guides."
                     />
                 </Grid>
-                <Grid item md={4}>
+                <Grid item md={3}>
                     <Card
                         icon={bulbIcon}
                         title="Comprehensive Content"
                         text="Discover Chefchaouen like a local with our comprehensive guide that covers everything from the top attractions to hidden gems, including the best places to eat, sleep, shop, and explore."
                     />
                 </Grid>
-                <Grid item md={4}>
+                <Grid item md={3}>
                     <Card
                         icon={hassleFreeIcon}
                         title="Hassle-Free Experience"
