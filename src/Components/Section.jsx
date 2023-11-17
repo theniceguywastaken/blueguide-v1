@@ -25,10 +25,11 @@ const Section = ({
     ) : null;
     const containerStyles = {
         width: "90%",
-        padding: "0 2.2rem",
-        margin: "5rem 0",
+        padding: "0 2.2em",
+        margin: "5em 0",
         "@media (max-width:600px)": {
-            margin: "2rem 0",
+            margin: "2em 0",
+            padding: "0 0.5em",
         },
     };
     return (

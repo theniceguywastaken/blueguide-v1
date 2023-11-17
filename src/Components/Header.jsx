@@ -31,7 +31,7 @@ function Header(props) {
     const drawer = (
         <Box
             onClick={handleDrawerToggle}
-            sx={{ textAlign: "center", padding: "1rem" }}
+            sx={{ textAlign: "center", padding: "1em" }}
         >
             <Typography variant="h6" sx={{ my: 2 }}>
                 <Logo />
@@ -62,9 +62,9 @@ function Header(props) {
             sx={{
                 display: "flex",
                 justifyContent: "center",
-                margin: "3.813rem 0 -8rem",
+                // margin: "3.813em 0 -8em",
                 "@media (max-width:600px)": {
-                    margin: " 1.5rem 0 -14rem ",
+                    // margin: " 1.5em 0 -14em ",
                 },
             }}
         >
@@ -129,12 +129,12 @@ function Header(props) {
     );
 }
 
-Header.propTypes = {
-    /**
-     * Injected by the documentation to work in an iframe.
-     * You won't need it on your project.
-     */
-    window: PropTypes.func,
-};
+// Header.propTypes = {
+//     /**
+//      * Injected by the documentation to work in an iframe.
+//      * You won't need it on your project.
+//      */
+//     window: PropTypes.func,
+// };
 
 export default Header;

@@ -5,6 +5,7 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faDribbble } from "@fortawesome/free-brands-svg-icons";
 import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { Button } from "@mui/material";
 
 function FooterBlock({ title, Comp: component }) {
     return (
@@ -19,7 +20,9 @@ function FooterNav({ items }) {
     let itemsList = items.map((item, i) => {
         return (
             <li key={i}>
-                <a href="#">{item}</a>
+                <Button variant="transparent">
+                    <a href="#">{item}</a>
+                </Button>
             </li>
         );
     });
@@ -32,20 +35,20 @@ function FooterNav({ items }) {
         </div>
     );
 }
-function InstaGrid() {
-    return (
-        <div className="insta">
-            <div className="feed">
-                <div className="feed_post"></div>
-                <div className="feed_post"></div>
-                <div className="feed_post"></div>
-                <div className="feed_post"></div>
-                <div className="feed_post"></div>
-                <div className="feed_post"></div>
-            </div>
-        </div>
-    );
-}
+// function InstaGrid() {
+//     return (
+//         <div className="insta">
+//             <div className="feed">
+//                 <div className="feed_post"></div>
+//                 <div className="feed_post"></div>
+//                 <div className="feed_post"></div>
+//                 <div className="feed_post"></div>
+//                 <div className="feed_post"></div>
+//                 <div className="feed_post"></div>
+//             </div>
+//         </div>
+//     );
+// }
 function Socials() {
     return (
         <div className="socials flex justify_center">
@@ -78,13 +81,13 @@ function Footer() {
             ]}
         />
     );
-    let Insta = <InstaGrid />;
+    // let Insta = <InstaGrid />;
     return (
         <footer className="footer grid justify_center">
             <Logo color={"white"} />
 
             <FooterBlock title="Navigation" Comp={Nav} />
-            <FooterBlock title="Instagram Follow" Comp={Insta} />
+            {/* <FooterBlock title="Instagram Follow" Comp={Insta} /> */}
 
             <div className="copyright flex column">
                 © 2023 Blue Guide. All rights reserved

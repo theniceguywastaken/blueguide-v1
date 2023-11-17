@@ -1,5 +1,4 @@
 import "./App.css";
-import Header from "./Components/Header";
 import Hero from "./Components/Hero";
 import Section from "./Components/Section";
 import Footer from "./Components/Footer";
@@ -7,6 +6,7 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import door from "./assets/door.png";
 import bookcover2 from "./assets/bookcover2.png";
 import SectionCards from "./Components/SectionCards";
+import Cards from "./Components/Cards";
 
 const width = 90;
 const padding = 2.2;
@@ -99,20 +99,11 @@ const theme = createTheme({
                 },
             },
         },
-        // MuiGrid: {
-        //     styleOverrides: {
-        //         container: {
-        //             width: `${width}%`,
-        //             padding: `0 ${padding}rem`,
-        //         },
-        //     },
-        // },
     },
 });
 function App() {
     return (
         <ThemeProvider theme={theme}>
-            <Header />
             <Hero />
             <Section
                 img={door}
@@ -126,6 +117,7 @@ function App() {
             <SectionCards
                 title="Why blue guide?"
                 heading="More than just a guide..."
+                Comp={Cards}
             />
             <Section
                 img={bookcover2}
@@ -133,6 +125,10 @@ function App() {
                 title="Content Walkthrough"
                 heading="Blue Guide Content "
                 text="“As a lifelong resident of Chefchaouen, I have always been passionate about sharing the unique beauty and culture of my hometown with others. After years of exploring every nook and cranny of the blue city, I decided to create Blue Guide an e-guide that captures the true essence of Chefchaouen and all it has to offer. With the help of other local enthusiasts, we have created a comprehensive guide that showcases the best of Chefchaouen, from the hidden gems to the well known landmarks. We hope that our guide will inspire you to discover the magic of Chefchaouen and all it has to offer.”"
+            />
+            <SectionCards
+                title="Testimonials"
+                heading="What do they think about Blue Guide"
             />
             <Footer />
         </ThemeProvider>

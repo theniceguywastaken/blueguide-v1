@@ -1,31 +1,46 @@
-import { Box, Grid, Typography, Container } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import bookCover from "../assets/eguidecover.png";
 import bgShape from "../assets/bgshape.svg";
 import bgShapeMobile from "../assets/bgshapemobile.svg";
 import ButtonBG from "./ButtonBG";
+import Header from "./Header";
 
 const Hero = () => {
     return (
-        <Box
+        <Grid
+            container
+            justifyContent="center"
+            rowGap={{ md: 10, xs: 3 }}
             sx={{
-                display: "flex",
-                justifyContent: "center",
                 background: `url(${bgShape}) center no-repeat`,
-                padding: "13rem 0 7rem",
+                padding: "3em 0 7em",
                 backgroundSize: "cover",
-                "@media (max-width:370px)": {
+                "@media (max-width:450px)": {
                     background: `url(${bgShapeMobile}) center no-repeat`,
-                    padding: "15rem 0 3rem",
+                    padding: "2em 0 0",
+                    backgroundSize: "cover",
                 },
             }}
         >
+            {" "}
+            <Grid item md={12} xs={12}>
+                <Header />
+            </Grid>
             <Grid
+                item
                 container
                 spacing={0}
                 rowSpacing={{ xs: 4 }}
                 direction="row"
                 justifyContent="center"
-                sx={{ width: "90%", padding: "0 2.2rem" }}
+                sx={{
+                    width: "90%",
+                    padding: "0 2.2em",
+                    "@media (max-width:600px)": {
+                        // margin: "2em 0",
+                        // padding: "0 0.5em",
+                    },
+                }}
             >
                 <Grid item xs={12} md={6}>
                     <Grid
@@ -63,7 +78,7 @@ const Hero = () => {
                     <img src={bookCover} alt="" />
                 </Grid>
             </Grid>
-        </Box>
+        </Grid>
     );
 };
 
