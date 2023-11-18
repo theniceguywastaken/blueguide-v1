@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "img": "src/assets/bilal.png",
+        "name": "Gamaho Gemoy",
+        "title": "customer",
+        "feedback": "The service that is served is so very charming with friendly waiters and also a comfortable place so that it makes customers feel at home for a long time in this shop and also the tea shop owner provides free warm and pastries making the atmosphere so beautiful, and this is a very pleasant experience for me. and I will visit here again every weekend with my family."
+    },
+    {
+        "id": 2,
+        "img": "src/assets/oubaid.jpg",
+        "name": "Oubaid",
+        "title": "Developer",
+        "feedback": "I cannot believe that blueguide is finally coming to life, it's been an idea since 2019"
+    },
+    {
+        "id": 1,
+        "img": "src/assets/bilal.png",
+        "name": "Bilal",
+        "title": "CEO",
+        "feedback": "I am the biggest me3gaz of all time"
+    }
+]

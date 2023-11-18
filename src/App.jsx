@@ -7,6 +7,7 @@ import door from "./assets/door.png";
 import bookcover2 from "./assets/bookcover2.png";
 import SectionCards from "./Components/SectionCards";
 import Cards from "./Components/Cards";
+import Testimonials from "./Components/Testimonials";
 
 const width = 90;
 const padding = 2.2;
@@ -21,12 +22,6 @@ const theme = createTheme({
         },
     },
     typography: {
-        body1: {
-            fontFamily: '"Poppins", "sans-serif"',
-        },
-        body2: {
-            fontFamily: '"Poppins", "sans-serif"',
-        },
         h1: {
             "@media (max-width:600px)": {
                 fontSize: "2.3rem",
@@ -66,7 +61,7 @@ const theme = createTheme({
         subtitle2: {
             fontWeight: 700,
         },
-        fontFamily: "'Poppins', sans-serif",
+        fontFamily: "'Poppins', Roboto, sans-serif",
         button: {
             fontWeight: 600,
             textTransform: "capitalize",
@@ -130,6 +125,7 @@ function App() {
                 title="Testimonials"
                 heading="What do they think about Blue Guide"
             />
+            <Testimonials />
             <Footer />
         </ThemeProvider>
     );
