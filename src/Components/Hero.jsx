@@ -45,27 +45,29 @@ const Hero = () => {
                 <Grid item xs={12} md={6}>
                     <Grid
                         container
+                        alignItems="center"
                         rowSpacing={{ xs: 2, md: 4 }}
-                        columnSpacing={{ xs: 2 }}
+                        // columnSpacing={{ xs: 2 }}
+                        columnGap={{ xs: 2, sm: 2, md: 0 }}
                     >
                         <Grid item md={12}>
                             <Typography variant="h1" color="secondary">
                                 Discover the Magic of Chefchaouen
                             </Typography>
                         </Grid>
-                        <Grid item md={12}>
+                        <Grid item sm={12} md={12}>
                             <Typography variant="p" color="secondary">
                                 Created by Locals, for Travelers Seeking
                                 Authentic Experiences
                             </Typography>
                         </Grid>
-                        <Grid item sm={6} md={4} lg={3}>
+                        <Grid item sm={3} md={4} lg={4}>
                             <ButtonBG
                                 content="Download Now"
                                 color="secondary"
                             />
                         </Grid>
-                        <Grid item sm={6} md={8} lg={9}>
+                        <Grid item sm={8} md={8} lg={8}>
                             <ButtonBG
                                 content="About Us"
                                 color="secondary"

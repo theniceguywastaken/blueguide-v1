@@ -38,7 +38,7 @@ function Item({ item }) {
                 rowGap={1}
                 textAlign="center"
             >
-                <Grid item md={12}>
+                <Grid item md={12} xs={12}>
                     <img
                         src={item.img}
                         alt={item.name}
@@ -49,10 +49,10 @@ function Item({ item }) {
                         }}
                     />
                 </Grid>
-                <Grid item md={12}>
+                <Grid item md={12} xs={12}>
                     <h4>{item.name}</h4>
                 </Grid>
-                <Grid item md={12}>
+                <Grid item md={12} xs={12}>
                     <p>{item.title}</p>
                 </Grid>
                 <Grid item md={8}>
