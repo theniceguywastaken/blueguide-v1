@@ -6,7 +6,7 @@ import reviews from "../reviews.json";
 const containerStyles = {
     width: "90%",
     padding: "0 2.2em",
-    margin: "5em 0",
+    margin: "0 0 5em",
     "@media (max-width:600px)": {
         margin: "2em 0",
         padding: "0 0.5em",
@@ -16,6 +16,9 @@ const containerStyles = {
 function CarouselBG() {
     return (
         <Carousel
+            // autoPlay={false}
+            animation="slide"
+            duration={500}
             sx={containerStyles}
             indicators={false}
             navButtonsAlwaysVisible
@@ -26,18 +29,21 @@ function CarouselBG() {
         </Carousel>
     );
 }
-
+const itemCardStyles = {
+    alignItems: "center",
+    alignContent: "center",
+    justifyContent: "center",
+    textAlign: "center",
+    height: "300px",
+    "@media (max-width:600px)": {
+        padding: "0 3em",
+        height: "600px",
+    },
+};
 function Item({ item }) {
     return (
         <Paper elevation={0}>
-            <Grid
-                container
-                // direction="column"
-                alignItems="center"
-                justifyContent="center"
-                rowGap={1}
-                textAlign="center"
-            >
+            <Grid container rowGap={2} sx={itemCardStyles}>
                 <Grid item md={12} xs={12}>
                     <img
                         src={item.img}
@@ -50,10 +56,10 @@ function Item({ item }) {
                     />
                 </Grid>
                 <Grid item md={12} xs={12}>
-                    <h4>{item.name}</h4>
+                    <h3>{item.name}</h3>
                 </Grid>
-                <Grid item md={12} xs={12}>
-                    <p>{item.title}</p>
+                <Grid item md={12} xs={12} textTransform="uppercase">
+                    <h4>{item.title}</h4>
                 </Grid>
                 <Grid item md={8}>
                     <p>{item.feedback}</p>
