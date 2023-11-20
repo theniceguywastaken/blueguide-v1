@@ -39,7 +39,7 @@ const Section = ({
                 justifyContent: "center",
             }}
         >
-            <Grid container sx={containerStyles} justifyContent="center">
+            <Grid container sx={containerStyles} justifyContent="start">
                 <Grid
                     item
                     sx={{ display: { xs: "none", md: "block" } }}
@@ -53,7 +53,9 @@ const Section = ({
                     xs={12}
                     md={6}
                     container
-                    rowSpacing={{ xs: 2, md: 0 }}
+                    alignContent="start"
+                    // rowSpacing={{ xs: 2, md: 0 }}
+                    rowGap={4}
                 >
                     <Grid md={12} item container alignItems="center">
                         <Grid item xs={5} md={5}>
@@ -70,7 +72,7 @@ const Section = ({
                             />
                         </Grid>
                     </Grid>
-                    <Grid item md={12}>
+                    <Grid sx={{ height: "fit-content" }} item md={12}>
                         <Typography variant="h2">{heading}</Typography>
                     </Grid>
                     {subheading ? (
